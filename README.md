@@ -31,3 +31,7 @@ Gross ROI % is calculated as the price difference (second sale - first sale) div
 To make this map, I joined the CSV to the [Parcels](https://richmond-geo-hub-cor.hub.arcgis.com/datasets/parcels-1/explore) shapefile from the city's GeoHub. The parcels are to-scale polygons, which isn't very convenient for heatmaps and also emphasizes the relative size of each parcel, so I converted the layer to geometry centroids, and applied an equal-count 5-class gray-red colormap based on the `flips_roi` column.
 
 ![A map of RVA showing about 3500 flipped houses over 8 years. There are large red clusters in Northside and East End, with smaller clusters across Southside - they indicate large increases in the cost of houses.](images/flip-map-1.png)
+
+Since several people asked about it, I also overlayed the [1923 HOLC "redlining" grades](https://dsl.richmond.edu/panorama/redlining/#loc=12/37.541/-77.562&city=richmond-va&area=D1). As expected from my previous [homeownership and redlining](https://github.com/kfinity/ric-homes) project, the clusters of high gross ROI are mostly in grade D areas with high "negro" populations, and in adjacent grade C areas. The gross ROI is the gross profit relative to the house price, and indicates the cost increase or "markup" that the flipper added to the house.
+
+![Similar to the previous map, but with an overlay of the 1923 HOLC map, showing the large red clusters mainly in historically black, devalued Grade D areas](images/flip-map-2-holc.png)
